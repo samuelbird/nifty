@@ -1,4 +1,4 @@
-# Spaced Repetition Learning App
+# Nifty: Don't let those tidbits slide
 
 A desktop application for quickly noting down nifty tidbits without disrupting your workflow, allowing for later spaced repetition learning to make these tidbits stick.
 

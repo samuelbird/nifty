@@ -10,20 +10,43 @@ A desktop application for quickly noting down nifty tidbits without disrupting y
 - Statistics tracking
 - Local SQLite database for data persistence
 
+## Project Structure
+
+```
+nifty/
+├── src/
+│   └── nifty/
+│       ├── __init__.py
+│       ├── gui.py          # GUI components and main window
+│       ├── logic.py        # Spaced repetition algorithm and database operations
+│       ├── hotkeys.py      # Global hotkey management
+│       └── models.py       # Data models and types
+├── tests/
+│   └── test_logic.py      # Unit tests
+├── setup.py               # Package installation configuration
+├── requirements.txt       # Project dependencies
+└── README.md             # This file
+```
+
 ## Installation
 
 1. Make sure you have Python 3.x installed
-2. Install the required dependencies:
+2. Clone this repository
+3. Create and activate a virtual environment (recommended):
    ```bash
-   pip install keyboard
+   python -m venv VENV
+   source VENV/bin/activate
    ```
-   (Note: tkinter and sqlite3 are included in Python's standard library)
+4. Install the package in development mode:
+   ```bash
+   pip install -e .
+   ```
 
 ## Usage
 
 1. Run the application:
    ```bash
-   python main.py
+   python -m nifty
    ```
 
 2. Adding Items:
@@ -51,3 +74,10 @@ The app uses a spaced repetition algorithm that:
 ## Data Storage
 
 All your learning items are stored in a local SQLite database (`learning_items.db`) in the same directory as the application.
+
+## Development
+
+To run the tests:
+```bash
+python -m pytest tests/
+```
